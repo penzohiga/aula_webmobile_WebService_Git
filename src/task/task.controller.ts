@@ -9,7 +9,7 @@ import { ApiOperation, ApiResponse, ApiBody } from '@nestjs/swagger';
 export class TaskController {
     constructor(private taskService: TaskService) {}
 
-    @Get()
+    @Get() 
     @ApiOperation({ summary: 'Get all Tasks', description: 'buscas todas as tarefas cadastradas no banco de dados'})
     @ApiResponse({ status: 200, description: 'ok', type: Task, isArray: true })
     async getTasks(): Promise<Task[]> {
